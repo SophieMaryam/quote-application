@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <app-new-quote @quoteAdded="newQuote"></app-new-quote>
         <app-quote-grid :quotes="quotes"></app-quote-grid>
     
     </div>
@@ -7,6 +8,7 @@
 
 <script>
     import QuoteGrid from './assets/components/QuoteGrid.vue'
+    import NewQuote from './assets/components/NewQuote.vue'
     export default {
         data: function() {
             return {
@@ -17,7 +19,8 @@
             }
         },
         components: {
-            appQuoteGrid: QuoteGrid
+            appQuoteGrid: QuoteGrid,
+            appNewQuote: NewQuote
         }
     }
 </script>
