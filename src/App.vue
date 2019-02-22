@@ -18,6 +18,11 @@
                 maxQuotes: 10
             }
         },
+        methods: {
+            newQuote(quote){
+                this.quotes.push(quote);
+            }
+        },
         components: {
             appQuoteGrid: QuoteGrid,
             appNewQuote: NewQuote
